@@ -1,204 +1,815 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>CISSP Domain 3 Security Architecture and Engineering class notes | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="CISSP Domain 3 Security Architecture and Engineering class notes">
-<meta property="og:url" content="http://example.com/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/index.html">
-<meta property="og:site_name" content="Hexo">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"securepeterchuang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言這篇文章主要是想要幫助下列對象  在 全智網 曾經上過 Peter 老師 CISSP 課程 的同學對於課程內容記憶的強化 其他也正在準備攻克 CISSP 考試的朋友們  希望此筆記對於各位的考試準備有一定的幫助，加油！  本篇大部分的中文用語我盡量官方簡體中文用詞一致，是為了讓各位提前適應簡中的考試的用語，如信息、默認等。另外，我也會盡量附上英文的對照，畢竟你遲早要熟悉資安的英文術語，為什麼不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CISSP Domain 3 Security Architecture and Engineering class notes 安全架構與工程設計 課堂筆記">
+<meta property="og:url" content="https://securepeterchuang.github.io/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/">
+<meta property="og:site_name" content="Secure Peter - All about security">
+<meta property="og:description" content="前言這篇文章主要是想要幫助下列對象  在 全智網 曾經上過 Peter 老師 CISSP 課程 的同學對於課程內容記憶的強化 其他也正在準備攻克 CISSP 考試的朋友們  希望此筆記對於各位的考試準備有一定的幫助，加油！  本篇大部分的中文用語我盡量官方簡體中文用詞一致，是為了讓各位提前適應簡中的考試的用語，如信息、默認等。另外，我也會盡量附上英文的對照，畢竟你遲早要熟悉資安的英文術語，為什麼不">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-10-21T00:22:04.000Z">
-<meta property="article:modified_time" content="2024-10-21T00:22:04.746Z">
-<meta property="article:author" content="John Doe">
+<meta property="og:image" content="https://securepeterchuang.github.io/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/ShareResponsibility.webp">
+<meta property="article:published_time" content="2024-10-21T02:52:24.000Z">
+<meta property="article:modified_time" content="2024-10-21T02:52:24.000Z">
+<meta property="article:author" content="Peter Chuang">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="https://securepeterchuang.github.io/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/ShareResponsibility.webp">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<link rel="canonical" href="https://securepeterchuang.github.io/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/">
 
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>CISSP Domain 3 Security Architecture and Engineering class notes 安全架構與工程設計 課堂筆記 | Secure Peter - All about security</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-</header>
 
-      <div class="outer">
-        <section id="main"><article id="post-CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/" class="article-date">
-  <time class="dt-published" datetime="2024-10-21T00:22:04.000Z" itemprop="datePublished">2024-10-21</time>
-</a>
-    
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Secure Peter - All about security</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      CISSP Domain 3 Security Architecture and Engineering class notes
-    </h1>
-  
 
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://securepeterchuang.github.io/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Peter Chuang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Secure Peter - All about security">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CISSP Domain 3 Security Architecture and Engineering class notes 安全架構與工程設計 課堂筆記
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-10-21 10:52:24" itemprop="dateCreated datePublished" datetime="2024-10-21T10:52:24+08:00">2024-10-21</time>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        
-      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇文章主要是想要幫助下列對象</p>
+<ol>
+<li>在 <a target="_blank" rel="noopener" href="https://ainetwork-training.com/">全智網</a> 曾經上過 <a target="_blank" rel="noopener" href="https://ainetwork-training.com/courses/cissp/">Peter 老師 CISSP 課程</a> 的同學對於課程內容記憶的強化</li>
+<li>其他也正在準備攻克 CISSP 考試的朋友們</li>
+</ol>
+<p>希望此筆記對於各位的考試準備有一定的幫助，加油！</p>
+<blockquote>
+<p>本篇大部分的中文用語我盡量官方簡體中文用詞一致，是為了讓各位提前適應簡中的考試的用語，如信息、默認等。另外，我也會盡量附上英文的對照，畢竟你遲早要熟悉資安的英文術語，為什麼不從現在開始?</p>
+</blockquote>
+<blockquote>
+<p>因 CISSP 考試的範圍很大，而面授課程時間有限，可能有部分的內容未在課程內提及。</p>
+</blockquote>
+<hr>
+<h2 id="Domain-3-考試大綱"><a href="#Domain-3-考試大綱" class="headerlink" title="Domain 3 考試大綱"></a>Domain 3 考試大綱</h2><p><strong>Domain 3 考什麼? ISC2 期望你透過這個 Domain 了解什麼?</strong></p>
+<p>身為考生的你，不應盲目地從一頁一頁的把文件啃完，應對於整體架構有一定的了解，在準備的過程中，不時地回去對照你當前的位置，才可能融會貫通；就像是實現穿越浩瀚沙漠的超級馬拉松賽事，需要有地圖和指南針協助，你才不會迷失方向。</p>
+<p>從 2024.04.15 生效的 <a target="_blank" rel="noopener" href="https://www.isc2.org/certifications/cissp/cissp-certification-exam-outline">ISC2 CISSP Certification Exam Outline Summary</a> (官網有附簡體中文的文件 <a target="_blank" rel="noopener" href="https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/exam-outlines/CISSP-Exam-Outline-May-2021-Chinese.pdf?rev=afeb7e45d8d1480eb3ba68417638ffcb&hash=3BD25DC681B168EB25BC7DD4E6AB79AC">CISSP — Chinese</a>) 可以看到這個領域的認證考試大綱，若你曾經上過 ISC2 授權教育訓練機構的課程，課程簡報也是這樣安排。</p>
+<ul>
+<li>3.1 利用安全設計原則來研究、實施和管理工程流程</li>
+<li>3.2 了解安全模型的基本概念(如 Biba、星形模型、Bell-LaPadula 模型等)</li>
+<li>3.3 根據系統安全需求選擇控制措施</li>
+<li>3.4 了解信息系統 (IS) 的安全功能 (例如內存保護、可信賴平台模塊 (TPM)、加密、解密)</li>
+<li>3.5 評估並緩解安全架構、設計和解決方案組件的漏洞</li>
+<li>3.6 選擇和確定加密解決方案</li>
+<li>3.7 了解密碼分析攻擊的方法</li>
+<li>3.8 在場地和設施的設計中應用安全原則</li>
+<li>3.9 設計場地和設施安全控制</li>
+<li>3.10 管理信息統生命週期</li>
+</ul>
+<p>經過消化與重組，我建議你可以將上述的10個小節分為四大類，而這份筆記也會從這四大類開始展開。<em>若你已是「資深考生」我也會建議你使用這四個類別對自己闡述教材裡面提及的內容，以驗證你對本領域知識內容的掌握。</em></p>
+<ol>
+<li>安全設計原則與模型有哪些? 如何用? (對應到 3.1, 3.2, 3.4, 3.5)</li>
+<li>密碼學與密碼學攻擊 (對應到3.6, 3.7)</li>
+<li>安全架構如何套用在工程設計上? (對應到 3.3, 3.10)</li>
+<li>實體安全設計概念與實作 (對應到 3.8, 3.9)</li>
+</ol>
+<p>以下開始進入正題…</p>
+<hr>
+<h2 id="安全設計原則與模型有哪些-如何用"><a href="#安全設計原則與模型有哪些-如何用" class="headerlink" title="安全設計原則與模型有哪些? 如何用?"></a>安全設計原則與模型有哪些? 如何用?</h2><p><strong>安全設計原則 (Secure Design Principals)</strong></p>
+<blockquote>
+<p>Domain 3.1, 2o24o4原廠簡報 Domain p.3 ~ 17</p>
+</blockquote>
+<ol>
+<li><strong>威脅建模 Threat Modeling</strong>：用攻擊者的角度來識別、分析系統中潛在的安全威脅。<blockquote>
+<p>我們曾在 Domain 1 提及 STRIDE threat modeling &lt;Domain 1 p.82&gt;，Domain 4 將會提及 Cyber-security Kill Chain &lt;Domain 4 p.14&gt;。</p>
+</blockquote>
+</li>
+<li><strong>最小特權 Least Privilege</strong>：從系統面給予使用者完成工作的最小權限。</li>
+<li><strong>縱深防禦 Defense in Depth, DiD</strong>：多層防禦策略，結合多種安全控制措施保護系統。加密是資安防護的最後一道防線。</li>
+<li><strong>安全默認設置 Secure Defaults</strong>：系統應用程式的預設配置應設定為最安全的狀態，以減少暴露於威脅的風險。ex. Wi-Fi AP 原廠初始設置早期可能沒有密碼或該廠共用初設密碼，這就是一個沒有 Secure Defaults 的實作。<blockquote>
+<p>202404版原廠簡報拿掉這塊，所以你找不到</p>
+</blockquote>
+</li>
+<li><strong>安全失效 Fail Securely</strong>：系統失效時，也能保持安全狀態(Security)，防止敏感資料洩漏或其他安全問題，ex. 網站出現404錯誤時，不應洩漏除錯(Debug)資訊。 vs. Fail Safe (一樣翻譯為安全失效)，指系統失效時，系統轉向一個安全狀態以避免隊人員造成傷害，ex. 門禁系統與消防受信主機連線，偵測到失火即關閉門禁管制。</li>
+<li><strong>職責分離 Segregation of Duties, SoD</strong>：把重要的職責和任務分散給多個人或團隊中，以降低有意或無意造成的風險。ex. 請購、採購、會計、出納流程。</li>
+<li><strong>保持簡單小巧 Keep it simple and small</strong>：在設計系統保持簡潔與精簡，減少潛在的安全漏洞和錯誤。ex. 軟體的模組化設計，開發人員只需要關注小的、單一功能的模組或元件。</li>
+<li><strong>零信任 Zero trust</strong>：一種不信任任何內部或外部資源的安全模型，所有資源都須經過嚴格的驗證和授權。<blockquote>
+<p>推薦閱讀：<a target="_blank" rel="noopener" href="https://www.ithome.com.tw/news/165397">【回歸根本定義，捍衛網路戰爭的無形防線】零信任之父第一手導讀零信任架構</a></p>
+</blockquote>
+</li>
+<li><strong>信任但驗證 Trust, but Verify</strong>：在信任某一資源(或實體)時，仍進行必要的驗證作業以確認安全性。</li>
+<li><strong>隱私設計 Privacy by design</strong>：在設計產品或系統時，要將隱私保護納入考量(特別是合規性)，確保全流程都考慮隱私保護。<blockquote>
+<p>推薦閱讀：<a target="_blank" rel="noopener" href="https://www.twreporter.org/a/e-id-in-taiwan-2021-failed">台灣數位身分證導入失敗案例</a></p>
+</blockquote>
+</li>
+<li><strong>責任共擔 Shared responsibility</strong>：在雲服務中使用，指服務供應商和使用者在安全管理上共同承擔責任，根據不同的服務模型(Service Model)分配不同的安全責任。<blockquote>
+<p>推薦閱讀： <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility">Shared responsibility in the cloud</a></p>
+</blockquote>
+</li>
+<li><strong>安全訪問服務邊緣 Secure access service edge, SASE</strong>：一種將網路安全功能和廣域網路(WAN)連結連接結合在邊緣，便於在分散式環境實施一致的安全政策。ex. 把公司內部的 VPN 或 FW 等傳統安全服務移到雲端，通過 SASE，員工無論在何處都可以透過 SASE 進行實時的安全檢查、身分驗證和權限管理，確保一致的安全政策保護。<blockquote>
+<p>此為 202404 新增範圍</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>補充說明：「零信任」和「信任但驗證」的差異</strong></p>
+<p>以實體安全為例，當你通過門禁管制(可能是通關機或門禁卡機)驗證後，你可以在內部環境漫遊(偵查)，這即是信任但驗證的案例。</p>
+<p>當一個區域網路(LAN)環境沒有進行區隔，無額外的內部防火牆或內部邊界設置，使用者進入內網後，在網路層級使用者可以自由選取系統進行訪問(敏感資源在系統層級仍會有進一步的驗證機制)，即是信任但驗證的案例。</p>
+<p>在零信任的環境中，每一個行為(無論是來自內部還是外部)都被視為潛在的風險，這意味著所有的流量、設備和用戶，都必須被持續監控和驗證。</p>
+<p><strong>補充說明：責任共擔</strong><br><img src="/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/ShareResponsibility.webp" alt="from Microsoft Learn:Shared responsibility in the cloud"></p>
+<p><strong>安全模型 (Security Models)</strong></p>
+<blockquote>
+<p>Domain 3.2, 2o24o4原廠簡報 Domain p.18 ~ 24，考試大綱提到 Star Model 其應指的是 BLP 和 Biba 所提到的 Star property。</p>
+</blockquote>
+<blockquote>
+<p>課堂間的 Subject 和 Object 的簡單關係在這邊不再提。</p>
+</blockquote>
+<ol>
+<li><strong>Bell-LaPadula (BLP)</strong>：專注於機密性，有三種安全性層次<ul>
+<li>Simple Security Property (簡單安全屬性)：No Read Up 不能向上讀取 (窺探機密)</li>
+<li>Star Security Property (*(星)安全屬性)：No Write Down 不能向下寫入(洩漏機密)</li>
+<li>Strong Star Security Property (粗體星安全屬性)，只能寫同級(嚴格控制資訊流)</li>
+</ul>
+</li>
+<li><strong>Biba</strong>：專注於完整性(可用數字精度類比)，也有三種安全性層次<ul>
+<li>Simple Integrity Property (簡單完整性屬性)，No Read Down 下能向下讀 (避免從低完整性的物件取得不精確的資料)</li>
+<li>Star Integrity Property (*(星)完整性屬性)，No Write Up 不能向上寫 (破壞上層完整性)</li>
+<li>Invocation Property (調用屬性)，低完整性的系統不能呼叫 (send service request) 到高完整性的系統</li>
+</ul>
+</li>
+<li><strong>Brewer and Nash (又稱 Chinese Wall 中國牆模型)</strong>：專注於解決利益衝突，特別使用於保護商業機密的場景。ex. 阻止使用者同時可訪問彼此有競爭關係的客戶資料，防止利益衝突。可透過標示 Subject 的 Clearance (利益衝突群組) 與 Object 的 Categorization 達成 (Subject 與 Object 的分級與分類請回去參考 Domain 2)。</li>
+<li><strong>Clark-Wilson</strong>：專注於完整性，當 Subject 向 Object 提出交易時由另一方 (Program) 評估，是一種職責分離(SoD)的概念。主要達成三個目標<ul>
+<li>避免未經授權的 Subject 進行變更，同 Biba。</li>
+<li>避免有經授權的 Subject 進行不良的變更，如帳戶餘額 10 元，不接受提款 100 元。</li>
+<li>維持系統的一致性，Subject 無法跳過 Program 直接從取 Object，確保套用一致的政策。</li>
+</ul>
+</li>
+<li><strong>Graham-Denning</strong>：專注於 Subject 與 Object 的八項基本操作，確保所有操作確保安全，包括 Subject 或 Object 的建立、刪除，向對象授予權限、轉移權限、取消權限與授予讀取權限。</li>
+<li><strong>Harrison, Ruzzo, Ulman (HRU)</strong>：與Graham-Denning類似，但Subject 只能對 Object 進行有限的操作。(預先定義好的，沒有調整的空間)</li>
+</ol>
+<p><strong>安全架構 (Security Architecture) 與信息系統的安全功能</strong></p>
+<blockquote>
+<p>Domain 3.4</p>
+</blockquote>
+<p><strong>模型 Model</strong>：幫助我們將複雜的系統分解為組件的簡化表示，一旦我們了解組成複雜系統的組件，我們就可以保護每個組件，從而解決高度複雜系統內各方面的問題。這裡的安全模型 (Security Model) 指關注機密性、完整性與防止利益衝突的模型。</p>
+<ol>
+<li><strong>State Machine model 狀態機模型</strong><em>(Textbook 有出現，但不在簡報中)</em>：常用在軟體程序和邏輯電路中，由一組狀態、轉換規則以及輸入和輸出組成，每當狀態機收到輸入時，它會根據規則改變狀態，並依當前狀態產生輸出。與前一截的內容對應如下：<ul>
+<li>BLP model (基於狀態機的機密性模型)</li>
+<li>Biba model (基於狀態機的完整性模型)</li>
+<li>Brewer and Nash (依賴狀態機確認資料流動與規則)</li>
+<li>Clark-Wilson Model (依賴狀態機強制執行交易的完整性約束)</li>
+<li>Graham-Denning (用狀態機模型描述系統操作與權限管理)</li>
+<li>Harrison, Ruzzo, Ulman (HRU) (用狀態機模型描述系統操作與權限管理)。</li>
+</ul>
+</li>
+<li><strong>Non-interference model 非干擾模型</strong><em>(Textbook 有出現，但不在簡報中)</em>：常用在關注於機密性模型，高機密等級的 Subject 進行任何的操作都不會被低機密等級 Subject 觀察到，從而防止機密信息洩漏。</li>
+<li><strong>Ring Model 環模型</strong><em>(202404簡報 p.35)</em>：常用於作業系統 (OS) 的內核 (Kernel) 設計，其將系統操作分成不同層級的特權環，從 Ring 0 ~ Ring 3，Ring 0 有最高的特權，若出錯會造成死亡之藍屏 (Blue Screen of Death)，常見的作業系統沒有使用 Ring 1 和 2，Ring 3 是應用程序運作的地方，若出錯不會影響系統內核的運作。Ring 0 為 Kernel model，Ring 1 ~ 3 為 User Mode。<blockquote>
+<p>推薦閱讀：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/2024%E5%B9%B4CrowdStrike%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%93%9D%E5%B1%8F%E4%BA%8B%E4%BB%B6">2024.07.19 CrowdStrike 軟體更新導致系統崩潰的案例</a>。</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>架構 Architecture</strong>：是指系統結構與其行為的高階描述，可確定各個組件與它們之間的相互關係與協作關係。如資訊系統架構(軟體架構、網路架構)、建築架構、組織架構(組織結構、業務流程的藍圖等)。</p>
+<p><strong>信息系統在架構上的安全功能</strong></p>
+<blockquote>
+<p>Domain 3.5</p>
+</blockquote>
+<p><strong>Must have 必要功能</strong></p>
+<ol>
+<li><strong>Privileged (model) instruction 特權模式指令</strong>：作業系統的操作模式分為 User Mode 和 Kernel Model，特權指令指的是只能在 Kernel Mode 下才能執行的指令。CPU的某些指令稍微有錯誤操作可能導致系統崩潰，這些指令被歸類為特權指令，需要使用系統呼叫 (System call) 來執行， ex. Clear memory, Write intro monitor memory…；而使用者平常在使用電腦時只能在 User Mode 下操作，無法使用在 Kernel Mode 下才能執行的特權指令，這樣可以避免系統崩潰的機會。</li>
+<li><strong>Processor states 處理器狀態</strong>：在 CPU 運行的過程中處在的不同工作模式，這些模式決定 CPU 能夠執行哪些指令，確保用戶程序不會影響系統核心的運作。其分為兩個模式 Supervisor state 執行 Kernel mode 指令、Problem state 執行 User model 指令。</li>
+<li><strong>Memory management 內存(記憶體)管理</strong>：目的為高效率使用內存資源、保護程序之間的內存、防止內存洩漏。</li>
+<li><strong>Abstraction Layers 抽象層</strong>：隱藏系統複雜性並提供簡化的介面。ex. 銀行提款機只露出讀卡機、鍵盤、螢幕與網路介面，安裝工程師不用知道內部實作細節，這可增加系統的可移植性與安全性。</li>
+<li><strong>Data and code space isolation &#x2F; Code and data segregation 資料與代碼隔離</strong>：將資料與代碼儲存在不同記憶體空間中，防止惡意代碼執行攻擊。ex. 資料被當作可執行代碼運作。</li>
+<li><strong>File systems attributes 檔案系統屬性</strong>：檔案系統屬性是用於描述檔案的元數據 (Meta data)，如唯讀、隱藏、系統存取權限等 (Windows 系統隨便一個檔案按右鍵可以看到)。這些屬性可以幫助控制檔案的訪問權限與其他操作行為。</li>
+<li><strong>Security kernel 安全核心</strong>：Ring model 提過，SK 負責實施底層的安全策略和機制，維持系統整體安全性的核心部分。</li>
+</ol>
+<p><strong>Vital extensions 重要的延伸</strong>(nice to have)</p>
+<ol>
+<li><strong>Access control 存取控制</strong>：一種安全管理機制，用於管理和限制使用者對資源的存取許可，Domain 5 會詳細的說明，先把幾個關鍵字記起來 MAC、DAC、NDAC。</li>
+<li><strong>Virtual machines (VM) 虛擬機</strong>：一種軟體模擬環境，模擬實際電腦系統的功能，允許在一台實體的主機上同時運作多個操作系統，隔離各個系統與應用程式，從而提供資源利用率和提供測試及開發環境的靈活性。Domain 3.5 等下會介紹 VM 的細節。</li>
+<li><strong>Sandbox environment 沙箱環境</strong>：一種隔離的測試和運行環境，允許在不影響主系統的情況下執行和測試未經檢驗的程序，可保護系統免受潛在惡意代碼攻擊。</li>
+<li><strong>Cryptographic systems 密碼系統</strong>：一種使用加密、解密技術保障信息的機密性、完整性、真實性、不可否認性的技術。等下 Domain 3.6 &amp; 3.7 詳細介紹。</li>
+<li><strong>Trusted Platform Module (TPM) 可信平台模組</strong>：一種硬體安全模組 (Hardware Security Module, HSM)，實體上是一個專用的安全晶片，通常整合在主機板上，提供安全功能，如安全開機、金鑰生成&#x2F;管理、設備身分驗證等。</li>
+</ol>
+<p><strong>補充說明：TPM 的安全功能</strong></p>
+<ol>
+<li><strong>加密金鑰管理</strong>：TPM可以安全的產生、儲存和管理加密金鑰，確保這些金鑰不會被未授權的應用程式或使用者訪問。</li>
+<li><strong>平台完整性檢查 (防竄改保護)</strong>：TPM可以檢察系統啟動過程中的關鍵部件，保證系統從可信狀態啟動，防止系統被竄改。</li>
+<li><strong>設備身分驗證</strong>：設備可利用儲存在晶片中的金鑰進行身分驗證</li>
+<li><strong>資料保護</strong>：TPM可以加密儲存在系統中的敏感資料，ex. BitLokcer 實現整個硬碟的加密。</li>
+</ol>
+<p>TPM 是實體上獨立的模組，在系統進入 User mode 前啟動，亦有資料燒錄至晶片上無法竄改等特性，使得 TPM 成為許多高安全性應用的基礎，在 Windows、Linux 中廣泛使用。</p>
+<p><strong>認識市面上的系統與其安全問題</strong></p>
+<blockquote>
+<p>Domain 3.5, 2o24o4原廠簡報 Domain p.39 ~ 42</p>
+</blockquote>
+<p>身為資訊安全專家，在了解安全設計原則與模型後，你還需要知道市面上常見的系統有哪些? 各是什麼? 有什麼弱點? 有什麼減緩措施?</p>
+<p>以下是 <a target="_blank" rel="noopener" href="https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/exam-outlines/CISSP-Exam-Outline-May-2021-Chinese.pdf?rev=afeb7e45d8d1480eb3ba68417638ffcb&hash=3BD25DC681B168EB25BC7DD4E6AB79AC">ISC2 認證考試大綱</a> 擷取出來的所有需要認識的系統，我依說明的方便性做了順序的調整。</p>
+<p><strong>Client-based System 客戶端系統</strong></p>
+<ol>
+<li>介紹：大量存在組織中，不斷有新的系統加入、舊的系統退役。</li>
+<li>弱點：繼承 (Inherent) 硬體、作業系統和應用程式軟體的弱點。(寄人籬下，屋頂漏水，你房間也跟著漏水)</li>
+<li>減緩措施：<ul>
+<li>在系統上安裝反惡意軟體及入侵偵測與預防軟體 (Host-based anti-malware and intrusion detection and prevention software)<blockquote>
+<p>202404 原廠簡報 Domain 7 p.66</p>
+</blockquote>
+</li>
+<li>安裝終端管理系統 (Endpoint management system) 可以掌握大量的客戶端狀況、推送軟體或指令、系統更新或修補的版本。當結合移動裝置管理 (Mobile Device Management, MDM) 實，可以降低裝置被偷或遺失的風險。</li>
+<li>使用者必須了解安全規定並安全地使用客戶端系統，資安意識教育訓練也是重要的一環。<blockquote>
+<p>202404 原廠簡報 Domain 1 p.94</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Server-based System 服務器端系統</strong></p>
+<ol>
+<li>介紹：為特定目的提供服務的系統 (ex. DNS、Web Server)。通常會集中管理、控制與維護。</li>
+<li>弱點：<ul>
+<li>繼承 (Inherent) 硬體、作業系統和應用程式軟體的弱點。</li>
+<li>連接到一個或多個可能會被網路攻擊的環境下</li>
+</ul>
+</li>
+<li>減緩措施：<ul>
+<li>增加冗餘 (Redundant)，降低單點失效 (Single Point of Failure, SPoF) 導致可用性風險</li>
+<li>實體 (physical), 邏輯 (logical), 或管理 (administrative) 存取控制 (access control)</li>
+</ul>
+</li>
+</ol>
+<p><strong>Database System 數據庫系統</strong></p>
+<ol>
+<li>介紹：圍繞著 Database management system (DBMS) 資料庫管理系統以及託管開系統的處理器與儲存系統而建置。</li>
+<li>弱點：<ul>
+<li>格式錯誤 (畸形) 的輸入 Malformed input，ex. 提款金額為正整數欄位，使用者卻輸入負數、含小數點的數字或大寫中文。</li>
+<li>拒絕服務 Denial of Service (DoS)，ex. 用大量的查詢請求癱瘓資料庫</li>
+<li>避免或繞過資料庫的存取控制機制 Avoiding or sidestepping access control，ex. 對暫存資料表的存取</li>
+</ul>
+</li>
+<li>減緩措施：輸入驗證、限制不正常流量、實施嚴格的存取控制政策</li>
+</ol>
+<p>**Cryptographic System 加密系統</p>
+<blockquote>
+<p>考試大綱有這條，這邊保留到 3.6 與 3.7 說明</p>
+</blockquote>
+<p><strong>Industrial Control System (ICS) 工業控制系統</strong></p>
+<ol>
+<li><p>介紹：常見於工業用系統和關鍵基礎設施 (Critical Infrastructure, CI) 中，由簡單的電腦進行監控與控制。主要由下列三個組件構成</p>
+<ul>
+<li>Supervisory Control and Data Acquisition (SCADA)：用於監控和控制分散在各地的設備，通過數據通信網絡連接到中央系統。位置：工廠中控室</li>
+<li>Distributed Control Systems (DCSs)：將控制功能分配到多個自治的但相互通信的子單元。位置：產線控制</li>
+<li>Programmable Logic Controllers (PLCs)：一種工業電腦，可用軟體編程，用於控制製造過程中的機械設備或自動化流程。位置：機械設備旁</li>
+</ul>
+</li>
+<li><p>弱點：</p>
+<ul>
+<li>Limited functionality 有限的功能：ICS 專注於特定的工業功能，無法快速適應新出現的威脅</li>
+<li>Limited protection 有限的保護：傳統 ICS 通常在資訊安全未被充分考慮的年代設計的，通常缺乏保護</li>
+<li>Long, economically useful service life 壽命長且經濟實用：ICS 設備使用壽命長，設計到佈署可能超過數十年。期間因技術更新，設備可能未能採用最新的安全更新和防護技術。</li>
+<li>Susceptible to misconfiguration and misuse 易發生錯誤配置與誤用：系統的複雜性高或使用者缺乏安全意識。</li>
+<li>Highly susceptible to denial of service (DoS) attacks 極易受到 DoS 攻擊：ICS 對於 DoS 攻擊沒有太多抵抗力。</li>
+<li>Attacks can produce physical effects 攻擊可能導致實體效果：網路攻擊直接影響設備，導致隊人員安全、環境或基礎設施造成實際損害。</li>
+<li>Often unattended in remote locations 常在偏遠無人看守地區：缺乏監控，難以即時發現並回應安全事故。</li>
+</ul>
+</li>
+<li><p>減緩措施：</p>
+<ul>
+<li>Isolated network infrastructure 隔離的網路基礎設施：氣隙網路 (Air-gap network)、防火牆 (Firewall)</li>
+<li>Robust network connection restrictions, access control, and monitoring 強大的網路連線限制、存取控制與監控：實施嚴格的網絡連接限制和訪問控制措施，以確保只有授權用戶和設備能夠訪問 ICS。</li>
+<li>Highly segmented or microsegmented networks 高度分段或微分割網路：網絡劃分為更小的區段或子網（即微分割），限制不同區段之間的通信流量。</li>
+<li>Protected communication channels 受保護的通訊管道：使用實體保護(physical proteciton) 或加密技術（如 TLS 或 VPN）保護 ICS 的數據通信，以防止攔截和竄改。</li>
+<li>Robust configuration control 強大的配置控制：制定嚴格的配置管理流程，確保系統所有變更都經過適當的審核和授權，並保持詳盡的審計記錄。<blockquote>
+<p>TLS、VPN、Firewall 等技術會在 Domain 4 說明。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>實體保護將在 Domain 3.8 與 3.9 說明。</p>
+</blockquote>
+<blockquote>
+<p>Configuration management 會在 Domain 7 說明。</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>Embedded System 嵌入式系統</strong></p>
+<ol>
+<li>介紹：直接融入機械、電器、液壓系統或其他類型設備的微型電腦技術。<ul>
+<li>與 PLC 的差異在於，PLC 是用於工業環境的設備，主要用於自動化機械的控制，由 sensor 的輸入訊號來控制其他部件。而嵌入式系統是具有專門功能的計算系統，用於家用電器、醫療設備等。</li>
+</ul>
+</li>
+<li>弱點：<ul>
+<li>Programming errors 編程錯誤</li>
+<li>Web-based vulnerability 基於 Web 的漏洞</li>
+<li>Weak access control or authentication 薄弱的存取控制或身分驗證</li>
+<li>Poor cryptography practices 不好的密碼學實踐</li>
+<li>Reverse engineering 逆向工程</li>
+<li>Malware 惡意軟體</li>
+<li>Eavesdropping 竊聽</li>
+</ul>
+</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>Internet of Things 物聯網 (IoT)</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>Cloud-based System 基於雲的系統 (如SaaS, IaaS, PaaS)</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>Virtualized System 虛擬化系統</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>Containerization 容器化</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>Micro-service 微服務 (例如, 應用編程接口 API)</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>Server-less Architecture 無服務器計算</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>Edge and Fog Computing Architecture 邊緣計算系統</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>High-Performance Computing System (HPC) 高性能計算系統</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<p><strong>Distributed System 分布式系統</strong></p>
+<ol>
+<li>介紹：</li>
+<li>弱點：</li>
+<li>減緩措施：</li>
+</ol>
+<hr>
+<h2 id="密碼學與密碼學攻擊"><a href="#密碼學與密碼學攻擊" class="headerlink" title="密碼學與密碼學攻擊"></a>密碼學與密碼學攻擊</h2><blockquote>
+<p>對應到3.6, 3.7</p>
+</blockquote>
+<hr>
+<h2 id="安全架構如何套用在工程設計上"><a href="#安全架構如何套用在工程設計上" class="headerlink" title="安全架構如何套用在工程設計上?"></a>安全架構如何套用在工程設計上?</h2><blockquote>
+<p>對應到 3.3, 3.10</p>
+</blockquote>
+<hr>
+<h2 id="實體安全設計概念與實作"><a href="#實體安全設計概念與實作" class="headerlink" title="實體安全設計概念與實作"></a>實體安全設計概念與實作</h2><blockquote>
+<p>對應到 3.8, 3.9</p>
+</blockquote>
+<hr>
+
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/" data-id="cm2i9v4n30000gww4efia7w00" data-title="CISSP Domain 3 Security Architecture and Engineering class notes" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+  <script src="https://utteranc.es/client.js"
+        repo="SecurePeterChuang/SecurePeterChuang.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Domain-3-%E8%80%83%E8%A9%A6%E5%A4%A7%E7%B6%B1"><span class="nav-number">2.</span> <span class="nav-text">Domain 3 考試大綱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E5%85%A8%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87%E8%88%87%E6%A8%A1%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B-%E5%A6%82%E4%BD%95%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">安全設計原則與模型有哪些? 如何用?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E7%A2%BC%E5%AD%B8%E8%88%87%E5%AF%86%E7%A2%BC%E5%AD%B8%E6%94%BB%E6%93%8A"><span class="nav-number">4.</span> <span class="nav-text">密碼學與密碼學攻擊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E5%85%A8%E6%9E%B6%E6%A7%8B%E5%A6%82%E4%BD%95%E5%A5%97%E7%94%A8%E5%9C%A8%E5%B7%A5%E7%A8%8B%E8%A8%AD%E8%A8%88%E4%B8%8A"><span class="nav-number">5.</span> <span class="nav-text">安全架構如何套用在工程設計上?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%A6%E9%AB%94%E5%AE%89%E5%85%A8%E8%A8%AD%E8%A8%88%E6%A6%82%E5%BF%B5%E8%88%87%E5%AF%A6%E4%BD%9C"><span class="nav-number">6.</span> <span class="nav-text">實體安全設計概念與實作</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Peter Chuang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Peter Chuang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2024/10/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
 
   
-</article>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
 
   
-    
+
+
+
 
   
-    
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+
+  
+
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/">CISSP Domain 3 Security Architecture and Engineering class notes</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/21/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
 </body>
 </html>

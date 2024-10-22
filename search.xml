@@ -1,228 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"securepeterchuang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Secure Peter - All about security">
-<meta property="og:url" content="https://securepeterchuang.github.io/">
-<meta property="og:site_name" content="Secure Peter - All about security">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Peter Chuang">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://securepeterchuang.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>Secure Peter - All about security</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Secure Peter - All about security</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="Searching..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-  <div class="reading-progress-bar"></div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://securepeterchuang.github.io/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Peter Chuang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Secure Peter - All about security">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/" class="post-title-link" itemprop="url">CISSP Domain 3 Security Architecture and Engineering class notes 安全架構與工程設計 課堂筆記</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-10-21 10:52:24" itemprop="dateCreated datePublished" datetime="2024-10-21T10:52:24+08:00">2024-10-21</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇文章主要是想要幫助下列對象</p>
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>CISSP Domain 3 Security Architecture and Engineering class notes 安全架構與工程設計 課堂筆記</title>
+    <url>/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇文章主要是想要幫助下列對象</p>
 <ol>
-<li>在 <a target="_blank" rel="noopener" href="https://ainetwork-training.com/">全智網</a> 曾經上過 <a target="_blank" rel="noopener" href="https://ainetwork-training.com/courses/cissp/">Peter 老師 CISSP 課程</a> 的同學對於課程內容記憶的強化</li>
+<li>在 <a href="https://ainetwork-training.com/">全智網</a> 曾經上過 <a href="https://ainetwork-training.com/courses/cissp/">Peter 老師 CISSP 課程</a> 的同學對於課程內容記憶的強化</li>
 <li>其他也正在準備攻克 CISSP 考試的朋友們</li>
 </ol>
 <p>希望此筆記對於各位的考試準備有一定的幫助，加油！</p>
@@ -235,7 +18,7 @@
 <hr>
 <h2 id="Domain-3-考試大綱"><a href="#Domain-3-考試大綱" class="headerlink" title="Domain 3 考試大綱"></a>Domain 3 考試大綱</h2><p><strong>Domain 3 考什麼? ISC2 期望你透過這個 Domain 了解什麼?</strong></p>
 <p>身為考生的你，不應盲目地從一頁一頁的把文件啃完，應對於整體架構有一定的了解，在準備的過程中，不時地回去對照你當前的位置，才可能融會貫通；就像是實現穿越浩瀚沙漠的超級馬拉松賽事，需要有地圖和指南針協助，你才不會迷失方向。</p>
-<p>從 2024.04.15 生效的 <a target="_blank" rel="noopener" href="https://www.isc2.org/certifications/cissp/cissp-certification-exam-outline">ISC2 CISSP Certification Exam Outline Summary</a> (官網有附簡體中文的文件 <a target="_blank" rel="noopener" href="https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/exam-outlines/CISSP-Exam-Outline-May-2021-Chinese.pdf?rev=afeb7e45d8d1480eb3ba68417638ffcb&hash=3BD25DC681B168EB25BC7DD4E6AB79AC">CISSP — Chinese</a>) 可以看到這個領域的認證考試大綱，若你曾經上過 ISC2 授權教育訓練機構的課程，課程簡報也是這樣安排。</p>
+<p>從 2024.04.15 生效的 <a href="https://www.isc2.org/certifications/cissp/cissp-certification-exam-outline">ISC2 CISSP Certification Exam Outline Summary</a> (官網有附簡體中文的文件 <a href="https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/exam-outlines/CISSP-Exam-Outline-May-2021-Chinese.pdf?rev=afeb7e45d8d1480eb3ba68417638ffcb&hash=3BD25DC681B168EB25BC7DD4E6AB79AC">CISSP — Chinese</a>) 可以看到這個領域的認證考試大綱，若你曾經上過 ISC2 授權教育訓練機構的課程，課程簡報也是這樣安排。</p>
 <ul>
 <li>3.1 利用安全設計原則來研究、實施和管理工程流程</li>
 <li>3.2 了解安全模型的基本概念(如 Biba、星形模型、Bell-LaPadula 模型等)</li>
@@ -276,16 +59,16 @@
 <li><strong>職責分離 Segregation of Duties, SoD</strong>：把重要的職責和任務分散給多個人或團隊中，以降低有意或無意造成的風險。ex. 請購、採購、會計、出納流程。</li>
 <li><strong>保持簡單小巧 Keep it simple and small</strong>：在設計系統保持簡潔與精簡，減少潛在的安全漏洞和錯誤。ex. 軟體的模組化設計，開發人員只需要關注小的、單一功能的模組或元件。</li>
 <li><strong>零信任 Zero trust</strong>：一種不信任任何內部或外部資源的安全模型，所有資源都須經過嚴格的驗證和授權。<blockquote>
-<p>推薦閱讀：<a target="_blank" rel="noopener" href="https://www.ithome.com.tw/news/165397">【回歸根本定義，捍衛網路戰爭的無形防線】零信任之父第一手導讀零信任架構</a></p>
+<p>推薦閱讀：<a href="https://www.ithome.com.tw/news/165397">【回歸根本定義，捍衛網路戰爭的無形防線】零信任之父第一手導讀零信任架構</a></p>
 </blockquote>
 </li>
 <li><strong>信任但驗證 Trust, but Verify</strong>：在信任某一資源(或實體)時，仍進行必要的驗證作業以確認安全性。</li>
 <li><strong>隱私設計 Privacy by design</strong>：在設計產品或系統時，要將隱私保護納入考量(特別是合規性)，確保全流程都考慮隱私保護。<blockquote>
-<p>推薦閱讀：<a target="_blank" rel="noopener" href="https://www.twreporter.org/a/e-id-in-taiwan-2021-failed">台灣數位身分證導入失敗案例</a></p>
+<p>推薦閱讀：<a href="https://www.twreporter.org/a/e-id-in-taiwan-2021-failed">台灣數位身分證導入失敗案例</a></p>
 </blockquote>
 </li>
 <li><strong>責任共擔 Shared responsibility</strong>：在雲服務中使用，指服務供應商和使用者在安全管理上共同承擔責任，根據不同的服務模型(Service Model)分配不同的安全責任。<blockquote>
-<p>推薦閱讀： <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility">Shared responsibility in the cloud</a></p>
+<p>推薦閱讀： <a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility">Shared responsibility in the cloud</a></p>
 </blockquote>
 </li>
 <li><strong>安全訪問服務邊緣 Secure access service edge, SASE</strong>：一種將網路安全功能和廣域網路(WAN)連結連接結合在邊緣，便於在分散式環境實施一致的安全政策。ex. 把公司內部的 VPN 或 FW 等傳統安全服務移到雲端，通過 SASE，員工無論在何處都可以透過 SASE 進行實時的安全檢查、身分驗證和權限管理，確保一致的安全政策保護。<blockquote>
@@ -345,7 +128,7 @@
 </li>
 <li><strong>Non-interference model 非干擾模型</strong><em>(Textbook 有出現，但不在簡報中)</em>：常用在關注於機密性模型，高機密等級的 Subject 進行任何的操作都不會被低機密等級 Subject 觀察到，從而防止機密信息洩漏。</li>
 <li><strong>Ring Model 環模型</strong><em>(202404簡報 p.35)</em>：常用於作業系統 (OS) 的內核 (Kernel) 設計，其將系統操作分成不同層級的特權環，從 Ring 0 ~ Ring 3，Ring 0 有最高的特權，若出錯會造成死亡之藍屏 (Blue Screen of Death)，常見的作業系統沒有使用 Ring 1 和 2，Ring 3 是應用程序運作的地方，若出錯不會影響系統內核的運作。Ring 0 為 Kernel model，Ring 1 ~ 3 為 User Mode。<blockquote>
-<p>推薦閱讀：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/2024%E5%B9%B4CrowdStrike%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%93%9D%E5%B1%8F%E4%BA%8B%E4%BB%B6">2024.07.19 CrowdStrike 軟體更新導致系統崩潰的案例</a>。</p>
+<p>推薦閱讀：<a href="https://zh.wikipedia.org/zh-tw/2024%E5%B9%B4CrowdStrike%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%93%9D%E5%B1%8F%E4%BA%8B%E4%BB%B6">2024.07.19 CrowdStrike 軟體更新導致系統崩潰的案例</a>。</p>
 </blockquote>
 </li>
 </ol>
@@ -385,7 +168,7 @@
 <p>Domain 3.5, 2o24o4原廠簡報 Domain p.39 ~ 42</p>
 </blockquote>
 <p>身為資訊安全專家，在了解安全設計原則與模型後，你還需要知道市面上常見的系統有哪些? 各是什麼? 有什麼弱點? 有什麼減緩措施?</p>
-<p>以下是 <a target="_blank" rel="noopener" href="https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/exam-outlines/CISSP-Exam-Outline-May-2021-Chinese.pdf?rev=afeb7e45d8d1480eb3ba68417638ffcb&hash=3BD25DC681B168EB25BC7DD4E6AB79AC">ISC2 認證考試大綱</a> 擷取出來的所有需要認識的系統，我依說明的方便性做了順序的調整。</p>
+<p>以下是 <a href="https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/exam-outlines/CISSP-Exam-Outline-May-2021-Chinese.pdf?rev=afeb7e45d8d1480eb3ba68417638ffcb&hash=3BD25DC681B168EB25BC7DD4E6AB79AC">ISC2 認證考試大綱</a> 擷取出來的所有需要認識的系統，我依說明的方便性做了順序的調整。</p>
 <p><strong>Client-based System 客戶端系統</strong></p>
 <ol>
 <li>介紹：大量存在組織中，不斷有新的系統加入、舊的系統退役。</li>
@@ -556,244 +339,6 @@
 <p>對應到 3.8, 3.9</p>
 </blockquote>
 <hr>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Peter Chuang</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Peter Chuang</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-  <script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '#page-configurations',
-    '.content-wrap',
-    '.post-toc-wrap',
-    '.languages',
-    '#pjax'
-  ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
-});
-
-window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (element.id) {
-      script.id = element.id;
-    }
-    if (element.className) {
-      script.className = element.className;
-    }
-    if (element.type) {
-      script.type = element.type;
-    }
-    if (element.src) {
-      script.src = element.src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (element.dataset.pjax !== undefined) {
-      script.dataset.pjax = '';
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="pjax">
-  
-
-  
-
-    </div>
-</body>
-</html>
+]]></content>
+  </entry>
+</search>
