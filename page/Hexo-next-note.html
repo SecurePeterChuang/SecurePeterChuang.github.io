@@ -22,28 +22,33 @@
     var CONFIG = {"hostname":"securepeterchuang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Secure Peter - All about security">
-<meta property="og:url" content="https://securepeterchuang.github.io/">
+  <meta name="description" content="撰寫 Hexo 文章時用的小抄">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo next note">
+<meta property="og:url" content="https://securepeterchuang.github.io/page/Hexo-next-note">
 <meta property="og:site_name" content="Secure Peter - All about security">
+<meta property="og:description" content="撰寫 Hexo 文章時用的小抄">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-23T12:04:02.000Z">
+<meta property="article:modified_time" content="2024-10-23T12:15:45.484Z">
 <meta property="article:author" content="Peter Chuang">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://securepeterchuang.github.io/">
+<link rel="canonical" href="https://securepeterchuang.github.io/page/Hexo-next-note">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
+    isHome : false,
     isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>Secure Peter - All about security</title>
+  <title>Hexo next note | Secure Peter - All about security
+</title>
   
 
 
@@ -175,88 +180,72 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
-          <div class="content index posts-expand">
+          <div class="content page posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://securepeterchuang.github.io/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Peter Chuang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Secure Peter - All about security">
-    </span>
+    
+    
+    
+    <div class="post-block" lang="en">
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/" class="post-title-link" itemprop="url">CISSP Domain 3 Security Architecture and Engineering class notes 安全架構與工程設計 課堂筆記</a>
-        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+<h1 class="post-title" itemprop="name headline">Hexo next note
+</h1>
 
-              <time title="Created: 2024-10-21 10:52:24" itemprop="dateCreated datePublished" datetime="2024-10-21T10:52:24+08:00">2024-10-21</time>
-            </span>
+<div class="post-meta">
+  
 
-          
+</div>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>這篇文章主要是想要幫助下列對象</p>
-<ol>
-<li>在 <a target="_blank" rel="noopener" href="https://ainetwork-training.com/">全智網</a> 曾經上過 <a target="_blank" rel="noopener" href="https://ainetwork-training.com/courses/cissp/">Peter 老師 CISSP 課程</a> 的同學對於課程內容記憶的強化</li>
-<li>其他也正在準備攻克 CISSP 考試的朋友們</li>
-</ol>
-<p>希望此筆記對於各位的考試準備有一定的幫助，加油！</p>
-<blockquote>
-<p>本篇大部分的中文用語我盡量官方簡體中文用詞一致，是為了讓各位提前適應簡中的考試的用語，如信息、默認等。另外，我也會盡量附上英文的對照，畢竟你遲早要熟悉資安的英文術語，為什麼不從現在開始?</p>
-</blockquote>
-<blockquote>
-<p>因 CISSP 考試的範圍很大，而面授課程時間有限，可能有部分的內容未在課程內提及。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+      
+      
+      <div class="post-body">
+          <h1 id="撰寫-Hexo-文章時用的小抄"><a href="#撰寫-Hexo-文章時用的小抄" class="headerlink" title="撰寫 Hexo 文章時用的小抄"></a>撰寫 Hexo 文章時用的小抄</h1><span id="more"></span>
+
+<div class="note default">
+            <p>default 提示</p>
+          </div>
+
+<div class="note primary">
+            <p>primary 提示</p>
+          </div>
+
+<div class="note success">
+            <p>success 提示</p>
+          </div>
+
+<div class="note info">
+            <p>info 提示</p>
+          </div>
+
+<div class="note warning">
+            <p>warning 提示</p>
+          </div>
+
+<div class="note danger">
+            <p>danger 提示</p>
+          </div>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">default 提示</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary 提示</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success 提示</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info 提示</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning 提示</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger 提示</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="mytab"><ul class="nav-tabs"><li class="tab"><a href="#mytab-1">mytab 1</a></li><li class="tab active"><a href="#mytab-2">mytab 2</a></li><li class="tab"><a href="#mytab-3">這是頁籤三</a></li><li class="tab"><a href="#mytab-4">mytab 4</a></li><li class="tab"><a href="#mytab-5"><i class="fa fa-user"></i>個人資料</a></li></ul><div class="tab-content"><div class="tab-pane" id="mytab-1"><h3 id="頁籤一"><a href="#頁籤一" class="headerlink" title="頁籤一"></a>頁籤一</h3><p>因沒有特別命名，所以此頁籤會用 <code>mytab</code> 加上流水號。</p></div><div class="tab-pane active" id="mytab-2"><h3 id="頁籤二"><a href="#頁籤二" class="headerlink" title="頁籤二"></a>頁籤二</h3><p>開無痕進來會先看到我。</p></div><div class="tab-pane" id="mytab-3"><h3 id="頁籤三"><a href="#頁籤三" class="headerlink" title="頁籤三"></a>頁籤三</h3><p>這裡有命名，會看到頁籤名不一樣。</p></div><div class="tab-pane" id="mytab-4"><h3 id="頁籤四"><a href="#頁籤四" class="headerlink" title="頁籤四"></a>頁籤四</h3><p>可以看到這裡的流水號是從 4 開始，應該是抓 array index 作為流水號。</p></div><div class="tab-pane" id="mytab-5"><h3 id="頁籤五"><a href="#頁籤五" class="headerlink" title="頁籤五"></a>頁籤五</h3><p>這裡有加 icon，有什麼 icon 可以來<a target="_blank" rel="noopener" href="https://fontawesome.com/icons">這裡</a>找。</p></div></div></div>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs mytab,2 %&#125; 將 tab 取名為 mytab，預設會選取第二個頁籤，使用 -1 會不選取</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">### 頁籤一</span><br><span class="line"></span><br><span class="line">因沒有特別命名，所以此頁籤會用 `mytab` 加上流水號。</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">### 頁籤二</span><br><span class="line"></span><br><span class="line">開無痕進來會先看到我。</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab 這是頁籤三 --&gt;</span><br><span class="line">### 頁籤三</span><br><span class="line"></span><br><span class="line">這裡有命名，會看到頁籤名不一樣。</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">### 頁籤四</span><br><span class="line"></span><br><span class="line">可以看到這裡的流水號是從 4 開始，應該是抓 array index 作為流水號。</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab 個人資料 @user --&gt;</span><br><span class="line">### 頁籤五</span><br><span class="line"></span><br><span class="line">這裡有加 icon，有什麼 icon 可以來[這裡](https://fontawesome.com/icons)找。</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+      </div>
+      
+      
       
     </div>
+    
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
 
 
           </div>
@@ -307,6 +296,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%92%B0%E5%AF%AB-Hexo-%E6%96%87%E7%AB%A0%E6%99%82%E7%94%A8%E7%9A%84%E5%B0%8F%E6%8A%84"><span class="nav-number">1.</span> <span class="nav-text">撰寫 Hexo 文章時用的小抄</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A0%81%E7%B1%A4%E4%B8%80"><span class="nav-number">1.0.1.</span> <span class="nav-text">頁籤一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A0%81%E7%B1%A4%E4%BA%8C"><span class="nav-number">1.0.2.</span> <span class="nav-text">頁籤二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A0%81%E7%B1%A4%E4%B8%89"><span class="nav-number">1.0.3.</span> <span class="nav-text">頁籤三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A0%81%E7%B1%A4%E5%9B%9B"><span class="nav-number">1.0.4.</span> <span class="nav-text">頁籤四</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A0%81%E7%B1%A4%E4%BA%94"><span class="nav-number">1.0.5.</span> <span class="nav-text">頁籤五</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
