@@ -43,7 +43,7 @@
 <hr>
 <h2 id="安全設計原則與模型有哪些-如何用"><a href="#安全設計原則與模型有哪些-如何用" class="headerlink" title="安全設計原則與模型有哪些? 如何用?"></a>安全設計原則與模型有哪些? 如何用?</h2><p><strong>安全設計原則 (Secure Design Principals)</strong></p>
 <blockquote>
-<p>Domain 3.1, 2o24o4原廠簡報 Domain 3 p.3 ~ 17</p>
+<p>Domain 3.1, 2o24o4簡報 Domain 3 p.3 ~ 17</p>
 </blockquote>
 <ol>
 <li><strong>威脅建模 Threat Modeling</strong>：用攻擊者的角度來識別、分析系統中潛在的安全威脅。<blockquote>
@@ -52,8 +52,8 @@
 </li>
 <li><strong>最小特權 Least Privilege</strong>：從系統面給予使用者完成工作的最小權限。</li>
 <li><strong>縱深防禦 Defense in Depth, DiD</strong>：多層防禦策略，結合多種安全控制措施保護系統。加密是資安防護的最後一道防線。</li>
-<li><strong>安全默認設置 Secure Defaults</strong>：系統應用程式的預設配置應設定為最安全的狀態，以減少暴露於威脅的風險。ex. Wi-Fi AP 原廠初始設置早期可能沒有密碼或該廠共用初設密碼，這就是一個沒有 Secure Defaults 的實作。<blockquote>
-<p>202404版原廠簡報拿掉這塊，所以你找不到</p>
+<li><strong>安全默認設置 Secure Defaults</strong>：系統應用程式的預設配置應設定為最安全的狀態，以減少暴露於威脅的風險。ex. Wi-Fi AP 初始設置早期可能沒有密碼或該廠共用初設密碼，這就是一個沒有 Secure Defaults 的實作。<blockquote>
+<p>202404版簡報拿掉這塊，所以你找不到</p>
 </blockquote>
 </li>
 <li><strong>安全失效 Fail Securely</strong>：系統失效時，也能保持安全狀態(Security)，防止敏感資料洩漏或其他安全問題，ex. 網站出現404錯誤時，不應洩漏除錯(Debug)資訊。 vs. Fail Safe (一樣翻譯為安全失效)，指系統失效時，系統轉向一個安全狀態以避免隊人員造成傷害，ex. 門禁系統與消防受信主機連線，偵測到失火即關閉門禁管制。</li>
@@ -84,7 +84,7 @@
 <p><strong>補充說明：責任共擔</strong><br><img src="/2024/10/21/CISSP-Domain-3-Security-Architecture-and-Engineering-class-notes/ShareResponsibility.webp" alt="from Microsoft Learn:Shared responsibility in the cloud"></p>
 <p><strong>安全模型 (Security Models)</strong></p>
 <blockquote>
-<p>Domain 3.2, 2o24o4原廠簡報 Domain p.18 ~ 24，考試大綱提到 Star Model 其應指的是 BLP 和 Biba 所提到的 Star property。</p>
+<p>Domain 3.2, 2o24o4簡報 Domain p.18 ~ 24，考試大綱提到 Star Model 其應指的是 BLP 和 Biba 所提到的 Star property。</p>
 </blockquote>
 <blockquote>
 <p>課堂間的 Subject 和 Object 的簡單關係在這邊不再提。</p>
@@ -166,25 +166,25 @@
 <p>TPM 是實體上獨立的模組，在系統進入 User mode 前啟動，亦有資料燒錄至晶片上無法竄改等特性，使得 TPM 成為許多高安全性應用的基礎，在 Windows、Linux 中廣泛使用。</p>
 <p><strong>認識市面上的系統與其安全問題</strong></p>
 <blockquote>
-<p>Domain 3.5, 2o24o4原廠簡報 Domain p.39 ~ 42</p>
+<p>Domain 3.5, 2o24o4簡報 Domain p.39 ~ 42</p>
 </blockquote>
 <p>身為資訊安全專家，在了解安全設計原則與模型後，你還需要知道市面上常見的系統有哪些? 各是什麼? 有什麼弱點? 有什麼減緩措施?</p>
 <p>以下是 <a href="https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/exam-outlines/CISSP-Exam-Outline-May-2021-Chinese.pdf?rev=afeb7e45d8d1480eb3ba68417638ffcb&hash=3BD25DC681B168EB25BC7DD4E6AB79AC">ISC2 認證考試大綱</a> 擷取出來的所有需要認識的系統，我依說明的方便性做了順序的調整。</p>
 <p><strong>Client-based System 客戶端系統</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.41</p>
+<p>2o24o4簡報 Domain 3.5 p.41</p>
 </blockquote>
 <ol>
 <li>介紹：大量存在組織中，不斷有新的系統加入、舊的系統退役。</li>
 <li>弱點：繼承 (Inherent) 硬體、作業系統和應用程式軟體的弱點。(寄人籬下，屋頂漏水，你房間也跟著漏水)</li>
 <li>減緩措施：<ul>
 <li>在系統上安裝反惡意軟體及入侵偵測與預防軟體 (Host-based anti-malware and intrusion detection and prevention software)<blockquote>
-<p>202404 原廠簡報 Domain 7 p.66</p>
+<p>202404 簡報 Domain 7 p.66</p>
 </blockquote>
 </li>
 <li>安裝終端管理系統 (Endpoint management system) 可以掌握大量的客戶端狀況、推送軟體或指令、系統更新或修補的版本。當結合移動裝置管理 (Mobile Device Management, MDM) 實，可以降低裝置被偷或遺失的風險。</li>
 <li>使用者必須了解安全規定並安全地使用客戶端系統，資安意識教育訓練也是重要的一環。<blockquote>
-<p>202404 原廠簡報 Domain 1 p.94</p>
+<p>202404 簡報 Domain 1 p.94</p>
 </blockquote>
 </li>
 </ul>
@@ -192,7 +192,7 @@
 </ol>
 <p><strong>Server-based System 服務器端系統</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.42</p>
+<p>2o24o4簡報 Domain 3.5 p.42</p>
 </blockquote>
 <ol>
 <li>介紹：為特定目的提供服務的系統 (ex. DNS、Web Server)。通常會集中管理、控制與維護。</li>
@@ -209,7 +209,7 @@
 </ol>
 <p><strong>Database System 數據庫系統</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.43</p>
+<p>2o24o4簡報 Domain 3.5 p.43</p>
 </blockquote>
 <ol>
 <li>介紹：圍繞著 Database management system (DBMS) 資料庫管理系統以及託管開系統的處理器與儲存系統而建置。</li>
@@ -227,7 +227,7 @@
 </blockquote>
 <p><strong>Industrial Control System (ICS) 工業控制系統</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.44</p>
+<p>2o24o4簡報 Domain 3.5 p.44</p>
 </blockquote>
 <ol>
 <li><p>介紹：常見於工業用系統和關鍵基礎設施 (Critical Infrastructure, CI) 中，由簡單的電腦進行監控與控制。主要由下列三個組件構成</p>
@@ -269,7 +269,7 @@
 </ol>
 <p><strong>Embedded System 嵌入式系統</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.47</p>
+<p>2o24o4簡報 Domain 3.5 p.47</p>
 </blockquote>
 <ol>
 <li>介紹：直接融入機械、電器、液壓系統或其他類型設備的微型電腦技術。<ul>
@@ -296,7 +296,7 @@
 </ol>
 <p><strong>Internet of Things 物聯網 (IoT)</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.49</p>
+<p>2o24o4簡報 Domain 3.5 p.49</p>
 </blockquote>
 <ol>
 <li>介紹：</li>
@@ -310,7 +310,7 @@
 </ol>
 <p><strong>Cloud-based System 基於雲的系統 (如SaaS, IaaS, PaaS)</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.52</p>
+<p>2o24o4簡報 Domain 3.5 p.52</p>
 </blockquote>
 <ol>
 <li>介紹：<ul>
@@ -341,7 +341,7 @@
 </ol>
 <p><strong>Edge and Fog Computing Architecture 邊緣計算系統</strong></p>
 <blockquote>
-<p>202404 原廠簡報 Domain 3.5 p.60</p>
+<p>202404 簡報 Domain 3.5 p.60</p>
 </blockquote>
 <ol>
 <li>介紹：</li>
@@ -358,7 +358,7 @@
 </ol>
 <p><strong>Virtualized System 虛擬化系統</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.51</p>
+<p>2o24o4簡報 Domain 3.5 p.51</p>
 </blockquote>
 <ol>
 <li>介紹：Hardware, Applications, Virtual machine images<ul>
@@ -380,7 +380,7 @@
 </ol>
 <p><strong>Containerization 容器化</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.57</p>
+<p>2o24o4簡報 Domain 3.5 p.57</p>
 </blockquote>
 <ol>
 <li>介紹：</li>
@@ -403,7 +403,7 @@
 </ol>
 <p><strong>Micro-service 微服務 (例如, 應用編程接口 API)</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.56</p>
+<p>2o24o4簡報 Domain 3.5 p.56</p>
 </blockquote>
 <ol>
 <li>介紹：lightweight protocols (SNS, SQS)</li>
@@ -422,7 +422,7 @@
 </ol>
 <p><strong>Server-less Architecture 無服務器計算</strong></p>
 <blockquote>
-<p>202404 原廠簡報 Domain 3.5 p.58</p>
+<p>202404 簡報 Domain 3.5 p.58</p>
 </blockquote>
 <ol>
 <li>介紹：</li>
@@ -440,7 +440,7 @@
 </ol>
 <p><strong>High-Performance Computing System (HPC) 高性能計算系統</strong></p>
 <blockquote>
-<p>202404 原廠簡報 Domain 3.5 p.59</p>
+<p>202404 簡報 Domain 3.5 p.59</p>
 </blockquote>
 <ol>
 <li>介紹：</li>
@@ -457,7 +457,7 @@
 </ol>
 <p><strong>Distributed System 分布式系統</strong></p>
 <blockquote>
-<p>2o24o4原廠簡報 Domain 3.5 p.50</p>
+<p>2o24o4簡報 Domain 3.5 p.50</p>
 </blockquote>
 <ol>
 <li>介紹：</li>
