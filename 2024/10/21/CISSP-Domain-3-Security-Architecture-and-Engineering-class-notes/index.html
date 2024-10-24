@@ -157,7 +157,7 @@
   </li>
         <li class="menu-item menu-item-hexo-next-note">
 
-    <a href="/Hexo-next-note/" rel="section"><i class="fa fa-th fa-fw"></i>Hexo-next-note</a>
+    <a href="/page/Hexo-next-note/" rel="section"><i class="fa fa-th fa-fw"></i>Hexo-next-note</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -303,7 +303,7 @@
 <hr>
 <h2 id="安全設計原則與模型有哪些-如何用"><a href="#安全設計原則與模型有哪些-如何用" class="headerlink" title="安全設計原則與模型有哪些? 如何用?"></a>安全設計原則與模型有哪些? 如何用?</h2><p><strong>安全設計原則 (Secure Design Principals)</strong></p>
 <blockquote>
-<p>Domain 3.1, 2o24o4原廠簡報 Domain p.3 ~ 17</p>
+<p>Domain 3.1, 2o24o4原廠簡報 Domain 3 p.3 ~ 17</p>
 </blockquote>
 <ol>
 <li><strong>威脅建模 Threat Modeling</strong>：用攻擊者的角度來識別、分析系統中潛在的安全威脅。<blockquote>
@@ -421,7 +421,7 @@
 <li><strong>加密金鑰管理</strong>：TPM可以安全的產生、儲存和管理加密金鑰，確保這些金鑰不會被未授權的應用程式或使用者訪問。</li>
 <li><strong>平台完整性檢查 (防竄改保護)</strong>：TPM可以檢察系統啟動過程中的關鍵部件，保證系統從可信狀態啟動，防止系統被竄改。</li>
 <li><strong>設備身分驗證</strong>：設備可利用儲存在晶片中的金鑰進行身分驗證</li>
-<li><strong>資料保護</strong>：TPM可以加密儲存在系統中的敏感資料，ex. BitLokcer 實現整個硬碟的加密。</li>
+<li><strong>資料保護</strong>：TPM可以加密儲存在系統中的敏感資料，ex. BitLocker 實現整個硬碟的加密。</li>
 </ol>
 <p>TPM 是實體上獨立的模組，在系統進入 User mode 前啟動，亦有資料燒錄至晶片上無法竄改等特性，使得 TPM 成為許多高安全性應用的基礎，在 Windows、Linux 中廣泛使用。</p>
 <p><strong>認識市面上的系統與其安全問題</strong></p>
@@ -431,6 +431,9 @@
 <p>身為資訊安全專家，在了解安全設計原則與模型後，你還需要知道市面上常見的系統有哪些? 各是什麼? 有什麼弱點? 有什麼減緩措施?</p>
 <p>以下是 <a target="_blank" rel="noopener" href="https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/exam-outlines/CISSP-Exam-Outline-May-2021-Chinese.pdf?rev=afeb7e45d8d1480eb3ba68417638ffcb&hash=3BD25DC681B168EB25BC7DD4E6AB79AC">ISC2 認證考試大綱</a> 擷取出來的所有需要認識的系統，我依說明的方便性做了順序的調整。</p>
 <p><strong>Client-based System 客戶端系統</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.41</p>
+</blockquote>
 <ol>
 <li>介紹：大量存在組織中，不斷有新的系統加入、舊的系統退役。</li>
 <li>弱點：繼承 (Inherent) 硬體、作業系統和應用程式軟體的弱點。(寄人籬下，屋頂漏水，你房間也跟著漏水)</li>
@@ -448,6 +451,9 @@
 </li>
 </ol>
 <p><strong>Server-based System 服務器端系統</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.42</p>
+</blockquote>
 <ol>
 <li>介紹：為特定目的提供服務的系統 (ex. DNS、Web Server)。通常會集中管理、控制與維護。</li>
 <li>弱點：<ul>
@@ -462,6 +468,9 @@
 </li>
 </ol>
 <p><strong>Database System 數據庫系統</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.43</p>
+</blockquote>
 <ol>
 <li>介紹：圍繞著 Database management system (DBMS) 資料庫管理系統以及託管開系統的處理器與儲存系統而建置。</li>
 <li>弱點：<ul>
@@ -477,6 +486,9 @@
 <p>考試大綱有這條，這邊保留到 3.6 與 3.7 說明</p>
 </blockquote>
 <p><strong>Industrial Control System (ICS) 工業控制系統</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.44</p>
+</blockquote>
 <ol>
 <li><p>介紹：常見於工業用系統和關鍵基礎設施 (Critical Infrastructure, CI) 中，由簡單的電腦進行監控與控制。主要由下列三個組件構成</p>
 <ul>
@@ -500,8 +512,8 @@
 <ul>
 <li>Isolated network infrastructure 隔離的網路基礎設施：氣隙網路 (Air-gap network)、防火牆 (Firewall)</li>
 <li>Robust network connection restrictions, access control, and monitoring 強大的網路連線限制、存取控制與監控：實施嚴格的網絡連接限制和訪問控制措施，以確保只有授權用戶和設備能夠訪問 ICS。</li>
-<li>Highly segmented or microsegmented networks 高度分段或微分割網路：網絡劃分為更小的區段或子網（即微分割），限制不同區段之間的通信流量。</li>
-<li>Protected communication channels 受保護的通訊管道：使用實體保護(physical proteciton) 或加密技術（如 TLS 或 VPN）保護 ICS 的數據通信，以防止攔截和竄改。</li>
+<li>Highly segmented or micro-segmented networks 高度分段或微分割網路：網絡劃分為更小的區段或子網（即微分割），限制不同區段之間的通信流量。</li>
+<li>Protected communication channels 受保護的通訊管道：使用實體保護(physical protection) 或加密技術（如 TLS 或 VPN）保護 ICS 的數據通信，以防止攔截和竄改。</li>
 <li>Robust configuration control 強大的配置控制：制定嚴格的配置管理流程，確保系統所有變更都經過適當的審核和授權，並保持詳盡的審計記錄。<blockquote>
 <p>TLS、VPN、Firewall 等技術會在 Domain 4 說明。</p>
 </blockquote>
@@ -516,6 +528,9 @@
 </li>
 </ol>
 <p><strong>Embedded System 嵌入式系統</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.47</p>
+</blockquote>
 <ol>
 <li>介紹：直接融入機械、電器、液壓系統或其他類型設備的微型電腦技術。<ul>
 <li>與 PLC 的差異在於，PLC 是用於工業環境的設備，主要用於自動化機械的控制，由 sensor 的輸入訊號來控制其他部件。而嵌入式系統是具有專門功能的計算系統，用於家用電器、醫療設備等。</li>
@@ -531,65 +546,199 @@
 <li>Eavesdropping 竊聽</li>
 </ul>
 </li>
-<li>減緩措施：</li>
+<li>減緩措施：<ul>
+<li>Risk assessment</li>
+<li>Patching and updating</li>
+<li>Secure coding techniques</li>
+<li>Implementing third-party risk management practices</li>
+</ul>
+</li>
 </ol>
 <p><strong>Internet of Things 物聯網 (IoT)</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.49</p>
+</blockquote>
 <ol>
 <li>介紹：</li>
-<li>弱點：</li>
+<li>弱點：<ul>
+<li>DoS</li>
+<li>Device security</li>
+<li>Cryptographic</li>
+</ul>
+</li>
 <li>減緩措施：</li>
 </ol>
 <p><strong>Cloud-based System 基於雲的系統 (如SaaS, IaaS, PaaS)</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.52</p>
+</blockquote>
 <ol>
-<li>介紹：</li>
-<li>弱點：</li>
-<li>減緩措施：</li>
-</ol>
-<p><strong>Virtualized System 虛擬化系統</strong></p>
-<ol>
-<li>介紹：</li>
-<li>弱點：</li>
-<li>減緩措施：</li>
-</ol>
-<p><strong>Containerization 容器化</strong></p>
-<ol>
-<li>介紹：</li>
-<li>弱點：</li>
-<li>減緩措施：</li>
-</ol>
-<p><strong>Micro-service 微服務 (例如, 應用編程接口 API)</strong></p>
-<ol>
-<li>介紹：</li>
-<li>弱點：</li>
-<li>減緩措施：</li>
-</ol>
-<p><strong>Server-less Architecture 無服務器計算</strong></p>
-<ol>
-<li>介紹：</li>
+<li>介紹：<ul>
+<li>3 種服務形式： <ul>
+<li>Software as a Service (SaaS)</li>
+<li>Platform as a Service (PaaS)</li>
+<li>Infrastructure as a Service (IaaS)</li>
+<li>Others: Network as a Service (NaaS)</li>
+</ul>
+</li>
+<li>4 種佈署模式：<ul>
+<li>Private cloud</li>
+<li>Community cloud</li>
+<li>Public cloud</li>
+<li>Hybrid cloud</li>
+<li>Others: GovCloud</li>
+</ul>
+</li>
+<li>5 種特徵：<ul>
+<li>On-demand self-service, Broad network access, Resource pooling, Rapid elasticity, Measure service</li>
+<li>Others: Multi-tenancy</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>弱點：</li>
 <li>減緩措施：</li>
 </ol>
 <p><strong>Edge and Fog Computing Architecture 邊緣計算系統</strong></p>
+<blockquote>
+<p>202404 原廠簡報 Domain 3.5 p.60</p>
+</blockquote>
 <ol>
 <li>介紹：</li>
-<li>弱點：</li>
-<li>減緩措施：</li>
+<li>弱點：<ul>
+<li>Network compromise</li>
+<li>Increase attack surface</li>
+</ul>
+</li>
+<li>減緩措施：<ul>
+<li>Increased network monitoring and incident response</li>
+<li>Strengthen inventory and accountability practices</li>
+</ul>
+</li>
+</ol>
+<p><strong>Virtualized System 虛擬化系統</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.51</p>
+</blockquote>
+<ol>
+<li>介紹：Hardware, Applications, Virtual machine images<ul>
+<li>Type 1 (Bare metal hypervisor), Type 2 (hosted hypervisor)</li>
+</ul>
+</li>
+<li>弱點：<ul>
+<li>Image management</li>
+<li>VM escape</li>
+<li>Underlying hardware weaknesses</li>
+<li>Knowledge gap</li>
+</ul>
+</li>
+<li>減緩措施：<ul>
+<li>Change management</li>
+<li>IAM</li>
+</ul>
+</li>
+</ol>
+<p><strong>Containerization 容器化</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.57</p>
+</blockquote>
+<ol>
+<li>介紹：</li>
+<li>弱點：<ul>
+<li>Insecure images</li>
+<li>Containers running with excessive privileges</li>
+<li>Unrestricted communication between containers</li>
+<li>Rouge or malicious processes</li>
+<li>Improper isolation from the host</li>
+</ul>
+</li>
+<li>減緩措施：<ul>
+<li>Image management</li>
+<li>Immutable infrastructure</li>
+<li>Granular security</li>
+<li>Micro-segmentation</li>
+<li>Proper configuration</li>
+</ul>
+</li>
+</ol>
+<p><strong>Micro-service 微服務 (例如, 應用編程接口 API)</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.56</p>
+</blockquote>
+<ol>
+<li>介紹：lightweight protocols (SNS, SQS)</li>
+<li>弱點：<ul>
+<li>Authorization</li>
+<li>Quality of Service (QoS)</li>
+<li>Denial of Service (DoS)</li>
+</ul>
+</li>
+<li>減緩措施：<ul>
+<li>Using authentication and authorization services</li>
+<li>Implementing micro-service in containers or serverless</li>
+<li>Using API gateway</li>
+</ul>
+</li>
+</ol>
+<p><strong>Server-less Architecture 無服務器計算</strong></p>
+<blockquote>
+<p>202404 原廠簡報 Domain 3.5 p.58</p>
+</blockquote>
+<ol>
+<li>介紹：</li>
+<li>弱點：<ul>
+<li>Malicious injection in the function</li>
+<li>Insecure configuration</li>
+<li>Cross-execution data persistency</li>
+</ul>
+</li>
+<li>減緩措施：<ul>
+<li>Training</li>
+<li>Secure coding practices</li>
+</ul>
+</li>
 </ol>
 <p><strong>High-Performance Computing System (HPC) 高性能計算系統</strong></p>
+<blockquote>
+<p>202404 原廠簡報 Domain 3.5 p.59</p>
+</blockquote>
 <ol>
 <li>介紹：</li>
-<li>弱點：</li>
-<li>減緩措施：</li>
+<li>弱點：<ul>
+<li>Latency constraints</li>
+<li>Improper workloads</li>
+</ul>
+</li>
+<li>減緩措施：<ul>
+<li>Proper architectural design</li>
+<li>Appropriate monitoring and logging practices</li>
+</ul>
+</li>
 </ol>
 <p><strong>Distributed System 分布式系統</strong></p>
+<blockquote>
+<p>2o24o4原廠簡報 Domain 3.5 p.50</p>
+</blockquote>
 <ol>
 <li>介紹：</li>
-<li>弱點：</li>
+<li>弱點：<ul>
+<li>Lack sufficient monitoring to detect failures</li>
+<li>Lack control capabilities tp detect security compromises</li>
+</ul>
+</li>
 <li>減緩措施：</li>
 </ol>
 <hr>
 <h2 id="密碼學與密碼學攻擊"><a href="#密碼學與密碼學攻擊" class="headerlink" title="密碼學與密碼學攻擊"></a>密碼學與密碼學攻擊</h2><blockquote>
 <p>對應到3.6, 3.7</p>
+</blockquote>
+<p><strong>選擇和確定加密解決方案</strong></p>
+<blockquote>
+<p>Domain 3.6</p>
+</blockquote>
+<p><strong>了解密碼分析攻擊的方法</strong></p>
+<blockquote>
+<p>Domain 3.7</p>
 </blockquote>
 <hr>
 <h2 id="安全架構如何套用在工程設計上"><a href="#安全架構如何套用在工程設計上" class="headerlink" title="安全架構如何套用在工程設計上?"></a>安全架構如何套用在工程設計上?</h2><blockquote>
