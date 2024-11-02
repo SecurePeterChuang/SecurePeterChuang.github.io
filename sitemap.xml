@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://securepeterchuang.github.io/2024/10/29/CISSP-Domain-4/</loc>
-    
-    <lastmod>2024-10-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://securepeterchuang.github.io/page/Hexo-next-note</loc>
     
     <lastmod>2024-10-29</lastmod>
@@ -40,22 +31,22 @@
 
   <url>
     <loc>https://securepeterchuang.github.io/</loc>
-    <lastmod>2024-10-30</lastmod>
+    <lastmod>2024-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://securepeterchuang.github.io/tags/For-AIN-Students-20241027/</loc>
-    <lastmod>2024-10-30</lastmod>
+    <loc>https://securepeterchuang.github.io/tags/CISSP/</loc>
+    <lastmod>2024-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://securepeterchuang.github.io/tags/CISSP/</loc>
-    <lastmod>2024-10-30</lastmod>
+    <loc>https://securepeterchuang.github.io/tags/For-AIN-Students-20241027/</loc>
+    <lastmod>2024-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
