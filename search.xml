@@ -82,7 +82,7 @@
   <entry>
     <title>如何註冊 ISC2 CC 免費考試</title>
     <url>/2024/11/25/How-to-register-free-CC-exam/</url>
-    <content><![CDATA[<h2 id="1MCC-百萬網路安全認證-CC-簡介"><a href="#1MCC-百萬網路安全認證-CC-簡介" class="headerlink" title="1MCC 百萬網路安全認證(CC) 簡介"></a>1MCC 百萬網路安全認證(CC) 簡介</h2><p>這是 ISC2 現在正在積極推廣的<strong>且限量的</strong>資訊安全考試，提供無任何資安領域經驗但想要投入該領域的人一個自主培訓語認證考試的機會。</p>
+    <content><![CDATA[<h3 id="1MCC-百萬網路安全認證-CC-簡介"><a href="#1MCC-百萬網路安全認證-CC-簡介" class="headerlink" title="1MCC 百萬網路安全認證(CC) 簡介"></a>1MCC 百萬網路安全認證(CC) 簡介</h3><p>這是 ISC2 現在正在積極推廣的<strong>且限量的</strong>資訊安全考試，提供無任何資安領域經驗但想要投入該領域的人一個自主培訓語認證考試的機會。</p>
 <p>以下提供帳號註冊及免費報名考試的流程…</p>
 <hr>
 <span id="more"></span>
@@ -119,5 +119,25 @@
             <p>I am a Candidate member of ISC2, and I would like to register for the free CC exam. However, I did not receive a 100% fee discount on the Pearson Vue registration page. Please assist me with the guidance to complete the exam registration. Thank you.</p>
           </div>
 ]]></content>
+  </entry>
+  <entry>
+    <title>CISSP 總複習 Domain 1~4</title>
+    <url>/2024/12/08/CISSP-General-Review-Domain1-4/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="請至班級 Line 群或課程中向 Peter 詢問存取密碼" data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="156ca0b5f954c95cc8bda3625b7b1d3468cd28314d854d4d7874a941a8dd011a">eec7eb95122ddb4b6c7425dd717e548c5f5c501e92979fbdc9d0f982e0fb759b6c0df037076215d726be10dea5855accd15ee2d864010d8247b22edd43f6fe9927356a37945f366750c118b9840570c94b0116d6b53759ea92d887a91394b4965c0adad27ba199affe711cfefb9cf32e067f0700dc7919d411fde718f59208dd72f0edbaae3ad6023638112c2d468d9b38c63e9e0724b622f0eaa1956d871fbe2653f5ab39f854e19e64ddbfd9014bcda4d89da2dfe30e12c068fe1a60cdeee9ce6c3e9fed673edac36ea9e0c4a423543bd233ee2ec76b1c791c74c28feaab89f6c195fb6421044a883006603fde1d72</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">請至班級 Line 群或課程中向 Peter 詢問存取密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>CISSP</tag>
+        <tag>For-AIN-Students-GeneralReview</tag>
+      </tags>
   </entry>
 </search>
