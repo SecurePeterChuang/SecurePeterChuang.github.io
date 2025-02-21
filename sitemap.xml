@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://securepeterchuang.github.io/2025/02/21/SSCP-Domain-3/</loc>
+    
+    <lastmod>2025-02-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://securepeterchuang.github.io/2025/02/05/SSCP-Domain-2/</loc>
     
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,7 +112,7 @@
 
   <url>
     <loc>https://securepeterchuang.github.io/</loc>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,28 +120,28 @@
   
   <url>
     <loc>https://securepeterchuang.github.io/tags/For-AIN-Students-20241027/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://securepeterchuang.github.io/tags/For-AIN-Students-GeneralReview/</loc>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://securepeterchuang.github.io/tags/InConstruction/</loc>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://securepeterchuang.github.io/tags/For-AIN-Students-GeneralReview/</loc>
+    <lastmod>2025-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://securepeterchuang.github.io/tags/For-AIN-Students-20250215/</loc>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -141,21 +150,21 @@
   
   <url>
     <loc>https://securepeterchuang.github.io/categories/CISSP/</loc>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://securepeterchuang.github.io/categories/CC/</loc>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://securepeterchuang.github.io/categories/SSCP/</loc>
-    <lastmod>2025-02-17</lastmod>
+    <lastmod>2025-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
