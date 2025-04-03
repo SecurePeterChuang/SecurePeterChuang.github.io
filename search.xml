@@ -308,4 +308,26 @@
         <tag>For-AIN-Students-20250215</tag>
       </tags>
   </entry>
+  <entry>
+    <title>SSCP 總複習 Domain 1~7</title>
+    <url>/2025/04/03/SSCP-General-Review/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="請至班級 Line 群或課程中向 Peter 詢問存取密碼" data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e7312d11b03eff0294f5b3e980f180ac36a8f81862b57312104ce070ba27cc05">d9fa34a30d6280b93c7898144f706cf22c3a675e4c82900177cd309f5f3fd319450182e63628f66ef064b8af904278c0ab0ef728084b26dacd7025b38146c9d78ca69a64c9e18edde33f66934595db5818cb4fe58d408fcb20e8130d71f33e553ad71b5ee3a2f0ba4b20bab577695129f1079f68c515435c05634d6d473edcf8757f186165272776e668dca14275fa73f6b34306ed0137935a5b3ff82bc5a41f8eac9d61b6176eae9b371a073897ca5cb86017c4d80a15b9924ee5cad299b7450686c4709a91b8201b4506d9a0a720053890b5b56813d331bc217d9346736305af087d5d067ee2949626080a66f7de3f34929e981f72d26ae5bf1bac1a94a190895d41edc384668197c9008effad3e28</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">請在此輸入存取密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>SSCP</category>
+      </categories>
+      <tags>
+        <tag>For-AIN-Students-20250215</tag>
+      </tags>
+  </entry>
 </search>
