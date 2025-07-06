@@ -2,6 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://securepeterchuang.github.io/2025/02/05/SSCP-Domain-1/</loc>
+    
+    <lastmod>2025-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://securepeterchuang.github.io/2025/03/06/SSCP-Domain-4/</loc>
+    
+    <lastmod>2025-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://securepeterchuang.github.io/2025/02/21/SSCP-Domain-3/</loc>
+    
+    <lastmod>2025-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://securepeterchuang.github.io/2025/03/08/SSCP-Domain-5/</loc>
+    
+    <lastmod>2025-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://securepeterchuang.github.io/2025/04/03/SSCP-General-Review/</loc>
+    
+    <lastmod>2025-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://securepeterchuang.github.io/2025/03/21/SSCP-Domain-7/</loc>
+    
+    <lastmod>2025-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://securepeterchuang.github.io/2025/03/14/SSCP-Domain-6/</loc>
+    
+    <lastmod>2025-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://securepeterchuang.github.io/2025/02/05/SSCP-Domain-2/</loc>
+    
+    <lastmod>2025-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://securepeterchuang.github.io/2024/10/29/CISSP-Domain-4/</loc>
     
     <lastmod>2025-04-17</lastmod>
@@ -29,81 +101,9 @@
   </url>
   
   <url>
-    <loc>https://securepeterchuang.github.io/2025/02/05/SSCP-Domain-1/</loc>
-    
-    <lastmod>2025-04-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://securepeterchuang.github.io/2024/12/08/CISSP-General-Review-Domain1-4/</loc>
     
     <lastmod>2025-04-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://securepeterchuang.github.io/2025/04/03/SSCP-General-Review/</loc>
-    
-    <lastmod>2025-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://securepeterchuang.github.io/2025/03/21/SSCP-Domain-7/</loc>
-    
-    <lastmod>2025-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://securepeterchuang.github.io/2025/03/14/SSCP-Domain-6/</loc>
-    
-    <lastmod>2025-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://securepeterchuang.github.io/2025/03/08/SSCP-Domain-5/</loc>
-    
-    <lastmod>2025-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://securepeterchuang.github.io/2025/02/21/SSCP-Domain-3/</loc>
-    
-    <lastmod>2025-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://securepeterchuang.github.io/2025/03/06/SSCP-Domain-4/</loc>
-    
-    <lastmod>2025-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://securepeterchuang.github.io/2025/02/05/SSCP-Domain-2/</loc>
-    
-    <lastmod>2025-04-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -175,7 +175,7 @@
 
   <url>
     <loc>https://securepeterchuang.github.io/</loc>
-    <lastmod>2025-04-17</lastmod>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -183,14 +183,14 @@
   
   <url>
     <loc>https://securepeterchuang.github.io/tags/For-AIN-CISSP-Students/</loc>
-    <lastmod>2025-04-17</lastmod>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://securepeterchuang.github.io/tags/For-AIN-SSCP-Students-20250215/</loc>
-    <lastmod>2025-04-17</lastmod>
+    <loc>https://securepeterchuang.github.io/tags/For-AIN-SSCP-Students/</loc>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -199,21 +199,21 @@
   
   <url>
     <loc>https://securepeterchuang.github.io/categories/CISSP/</loc>
-    <lastmod>2025-04-17</lastmod>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://securepeterchuang.github.io/categories/CC/</loc>
-    <lastmod>2025-04-17</lastmod>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://securepeterchuang.github.io/categories/SSCP/</loc>
-    <lastmod>2025-04-17</lastmod>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
